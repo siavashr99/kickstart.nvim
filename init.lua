@@ -549,7 +549,63 @@ do
     --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
     --   },
     -- },
-    -- pickers = {}
+    pickers = {
+      find_files = {
+        theme = 'ivy',
+      },
+      help_tags = {
+        theme = 'ivy',
+      },
+      keymaps = {
+        theme = 'ivy',
+      },
+      builtin = {
+        theme = 'ivy',
+      },
+      grep_string = {
+        theme = 'ivy',
+      },
+      live_grep = {
+        theme = 'ivy',
+      },
+      diagnostics = {
+        theme = 'ivy',
+      },
+      resume = {
+        theme = 'ivy',
+      },
+      oldfiles = {
+        theme = 'ivy',
+      },
+      commands = {
+        theme = 'cursor',
+      },
+      buffers = {
+        theme = 'ivy',
+      },
+      lsp_references = {
+        theme = 'ivy',
+      },
+      lsp_implementations = {
+        theme = 'ivy',
+      },
+      lsp_definitions = {
+        theme = 'ivy',
+      },
+      lsp_document_symbols = {
+        theme = 'ivy',
+      },
+      lsp_dynamic_workspace_symbols = {
+        theme = 'ivy',
+      },
+      lsp_type_definitions = {
+        theme = 'ivy',
+      },
+      current_buffer_fuzzy_find = {
+        theme = 'ivy',
+      },
+    },
+
     extensions = {
       ['ui-select'] = { require('telescope.themes').get_dropdown() },
     },
@@ -746,9 +802,7 @@ do
     -- gopls = {},
     pyright = {},
     ruff = {
-      on_attach = function(client)
-        client.server_capabilities.hoverProvider = false
-      end
+      on_attach = function(client) client.server_capabilities.hoverProvider = false end,
     },
     -- tsc = {},
     --
@@ -809,7 +863,7 @@ do
   }
 
   -- Ensure the servers and tools above are installed
-  --
+  --vim.g.have_nerd_font }
   -- To check the current status of installed tools and/or manually install
   -- other tools, you can run
   --    :Mason
@@ -857,7 +911,7 @@ do
       -- rust = { 'rustfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
-      python = { "ruff_fix", "ruff_format" },
+      python = { 'ruff_fix', 'ruff_format' },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
